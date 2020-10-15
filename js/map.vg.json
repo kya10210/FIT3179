@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Life Expectancy",
+  "title": "Life Expectancy in Europe 2016",
   "width": 800,
   "height": 600,
   "data": {
@@ -11,16 +11,16 @@
         }
   },
   "transform": [{
-      "lookup": "properties.name",
+      "lookup": "properties.wb_a2",
       "from": {
         "data": {
-          "url": "https://kya10210.github.io/FIT3179/data/life_expectancy_2016.csv"
+          "url": "https://kya10210.github.io/FIT3179/data/life_expectancy_2016_short.csv"
         },
-        "key": "country",
+        "key": "country_short",
         "fields": ["life_expect"]
       }
     },
-    {"calculate": "datum.life_expect + 0.1", "as": "Life Expect"}
+    {"calculate": "datum.life_expect", "as": "Life Expect"}
   ],
   "projection": {
     "type": "equirectangular"
@@ -36,7 +36,7 @@
     },
     "tooltip": [
       {"field": "properties.name", "type": "nominal", "title": "Country"},
-      {"field": "life_expect", "type": "quantitative"}
+      {"field": "Life Expect", "type": "quantitative", "title":"Life Expectancy"}
     ]
   }
 
