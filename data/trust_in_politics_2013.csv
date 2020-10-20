@@ -1,33 +1,33 @@
-country,political_trust_rating
-Belgium,4.6
-Bulgaria,2.6
-Czechia,3.7
-Denmark,5.9
-Germany,4.9
-Estonia,4.4
-Ireland,3.2
-Greece,2
-Spain,1.9
-France,3
-Croatia,2.8
-Italy,2.1
-Cyprus,2.6
-Latvia,3.6
-Lithuania,4.5
-Luxembourg,5
-Hungary,4.5
-Malta,5.7
-Netherlands,5.5
-Austria,4.4
-Poland,3.5
-Portugal,1.7
-Romania,4.8
-Slovenia,1.8
-Slovakia,3.5
-Finland,6
-Sweden,5.5
-United Kingdom,3.8
-Iceland,3.7
-Norway,5.9
-Switzerland,6.6
-Turkey,4.9
+country,political_trust_rating,subregion
+Austria,4.4,Western Europe
+Belgium,4.6,Western Europe
+Bulgaria,2.6,Eastern Europe
+Croatia,2.8,Eastern Europe
+Cyprus,2.6,Southern Europe
+Czechia,3.7,Eastern Europe
+Denmark,5.9,Northern Europe
+Estonia,4.4,Eastern Europe
+Finland,6,Northern Europe
+France,3,Western Europe
+Germany,4.9,Western Europe
+Greece,2,Southern Europe
+Hungary,4.5,Eastern Europe
+Iceland,3.7,Northern Europe
+Ireland,3.2,Western Europe
+Italy,2.1,Southern Europe
+Latvia,3.6,Eastern Europe
+Lithuania,4.5,Eastern Europe
+Luxembourg,5,Western Europe
+Malta,5.7,Southern Europe
+Netherlands,5.5,Western Europe
+Norway,5.9,Northern Europe
+Poland,3.5,Eastern Europe
+Portugal,1.7,Southern Europe
+Romania,4.8,Eastern Europe
+Slovakia,3.5,Eastern Europe
+Slovenia,1.8,Eastern Europe
+Spain,1.9,Southern Europe
+Sweden,5.5,Northern Europe
+Switzerland,6.6,Western Europe
+Turkey,4.9,Eastern Europe
+United Kingdom,3.8,Western Europe
