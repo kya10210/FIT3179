@@ -1,0 +1,90 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v4.json", 
+  "width": 500,
+  "height": 400,
+  "title": "2013 Europe Trust Rating",
+  "data": {
+    "url": "https://kya10210.github.io/FIT3179/data/trust_rating_combined.csv"
+  },
+  "encoding":{
+    "x": {
+      "field": "legal_trust_rating",
+      "type": "quantitative",
+      "title": "legal_trust_rating",
+      "axis": { "tickCount": 3},
+      "scale": {"type": "linear", "domain": [0, 8]}
+    }, 
+    "y": {
+      "field": "political_trust_rating",
+      "type": "quantitative",
+      "axis": {"tickCount": 3},
+      "scale": {"type": "linear", "domain": [0, 8]} 
+    }
+  },
+  "layer":[
+    {
+      "selection": { 
+        "subregion_highlight": {
+          "type": "multi", "fields": ["subregion"], "bind": "legend"
+        }
+      },
+      "mark": "circle", 
+      "encoding": { 
+        "color": {
+          "field": "subregion",
+          "type": "nominal", 
+          "scale": {
+            "domain": [
+              "Western Europe", "Eastern Europe", "Northern Europe",  "Southern Europe"],
+            "range": [
+    "#e41a1c", "#984ea3", "#ff7f00", "#a65628"
+            ]
+          }
+        },
+      "opacity": {
+        "condition": {
+          "selection": "subregion_highlight", "value": 0.8},
+          "value": 0.2 },
+      "size": {
+        "field": "police_trust_rating",
+        "type": "quantitative",
+        "scale": {
+          "type": "threshold",
+          "domain": [2, 4, 6, 8], 
+          "range": [50, 150, 200, 400, 600]
+        },
+      "legend": {"format": ".2s"}
+      },
+    "tooltip": [
+      {"field": "country", "type": "nominal"},
+      {"field": "police_trust_rating", "type": "quantitative","format":","}, 
+      {"field": "legal_trust_rating", "type": "quantitative", "format": ","},        {"field": "political_trust_rating", "type": "quantitative", "format": ","}]
+    }},
+{"mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -12,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {"field": "country", "type": "nominal"},
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {
+            "test": "datum['country'] == 'Spain' || datum['country'] == 'Switzerland' || datum['country'] == 'Norway' || datum['country'] == 'Malta' || datum['country'] == 'Italy'",
+            "value": 1
+          },
+          "value": 0
+        },
+        "tooltip": [
+        {"field": "country", "type": "nominal"},
+{"field": "police_trust_rating", "type": "quantitative","format":","}, 
+{"field": "legal_trust_rating", "type": "quantitative", "format": ","}, {"field": "political_trust_rating", "type": "quantitative", "format": ","}
+        ]
+      }
+    }
+]
+
+ 
+}
